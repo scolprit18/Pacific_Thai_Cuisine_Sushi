@@ -1,0 +1,647 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* my styles */
+
+:root {
+    --dark-red: #590202;
+    --cream: #FAEBD7;
+    --yellow: #F9CA6F; 
+    --red: #BF2026;
+}
+
+html {
+    background-image: url("images/red.jpeg");
+    background-size: 1800px 1200px;
+    font-family: "Hobeaux", sans-serif;
+}
+
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: .65fr 5fr .5fr .25fr;
+    margin: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 7fr .25fr;
+    margin: 0 auto;
+}
+
+.sushi-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 12fr .5fr;
+}
+
+header {
+    background-color: #590202;
+    filter: opacity(.95);
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: .5fr .25fr;
+    margin: 20px;
+}
+
+.container header {
+    height: 280px;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+h1 {
+    font-family: "blenny-thai", sans-serif;
+    font-size: 5vw;
+    color: var(--red);
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: 100px;
+}
+
+nav {
+    grid-column: 2;
+    grid-row: 2;
+    padding-left: 20px;
+    padding-top: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--yellow);
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: black;
+}
+
+header li {
+    display: inline;
+    padding: 10px;
+    
+}
+
+aside {
+    background-color: #590202;
+    filter: opacity(.95);
+    grid-column: 1;
+    grid-row: 2;
+    margin: 10px 0px 10px 20px;
+    padding: 40px;
+    font-size: 1.3vw;
+    text-align: center;
+}
+
+address, #phone {
+    font-weight: 600;
+    color: var(--yellow);
+    padding: 5px;
+}
+
+aside h2 {
+    font-weight: 600;
+    font-size: 1.5vw;
+    color: var(--cream);
+    padding: 10px;
+    padding-top: 20px;
+}
+
+aside h3 {
+    font-weight: 600;
+    color: var(--cream);
+    padding: 5px;
+}
+
+aside p {
+    color: var(--cream);
+    padding-bottom: 10px;
+}
+
+.time {
+    padding-bottom: 30px;
+}
+
+.menu {
+    background-color: var(--cream);
+    filter: opacity(.90);
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70vw;
+    height: fit-content;
+}
+
+.menu h2 {
+    grid-column: 1 / span 2;
+}
+
+.menu h3 {
+    grid-column: 1;
+}
+
+.menu .price {
+    grid-column: 2;
+    text-align: right;
+}
+
+#sushi-menu {
+    background-color: var(--cream);
+    filter: opacity(.90);
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 70vw;
+    height: fit-content;
+}
+
+#homepage {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    margin: 10px 20px 10px 40px;
+}
+
+#curry {
+    width: 75vw;
+    height: auto;
+    filter: opacity(.99);
+}
+
+#specials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FAEBD7;
+    filter: opacity(.90);
+    padding: 40px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 3vw;
+    padding-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu h3, .menu-item {
+    text-transform: uppercase;
+}
+
+#egg-roll {
+    margin: 0 auto;
+    font-size: 2vw;
+    grid-column: 1 /span 2;
+}
+
+#sushi-roll {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+#sushi-roll li {
+    padding-bottom: 10px;
+}
+
+.container .menu-item, .container .menu-description, h4 {
+    grid-column: 1;
+}
+
+h2, .rice {
+    text-align: center;
+    grid-column: 1 / span 2;
+    padding-bottom: 10px;
+}
+
+#specials p {
+    font-size: 1.5vw;
+    grid-column: 1 /span 2;
+}
+
+.menu-description, .sauce {
+    padding-top: 5px;
+}
+
+h3, .price {
+    font-weight: 550;
+    font-size: 1.6vw;
+    padding-top: 30px;
+}
+
+.container h3 {
+    padding-top: 20px;
+}
+
+h4 {
+    font-weight: 550;
+    font-size: 1.4vw;
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+#specials h3 {
+    grid-column: 1;
+}
+
+#specials .price {
+    grid-column: 2;
+    text-align: right;
+}
+
+#nigiri {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr .5fr .5 2fr;
+    padding: 0 100px 0 100px;
+}
+
+#nigiri h2 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+#nigiri #sashimi {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#nigiri #sashimi-rice {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#nigiri #menu-price {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#menu-price .price {
+    font-size: 1.3vw;
+    padding: 7px;
+}
+
+#nigiri #items {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#nigiri #menu-items {
+    grid-column: 2;
+    grid-row: 4;
+    font-weight: 550;
+    font-size: 1.3vw;
+}
+
+#menu-items li {
+    padding: 7px;
+}
+
+#menu-items .menu-item, #items {
+    text-align: right;
+}
+
+#makimono {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#makimono .menu-item, #makimono .menu-description {
+    grid-column: 1;
+}
+#makimono .price {
+    grid-column: 2;
+    text-align: right;
+}
+
+#cooked-rolls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#cooked-rolls .menu-item, #cooked-rolls .menu-description {
+    grid-column: 1;
+}
+#cooked-rolls .price {
+    grid-column: 2;
+    text-align: right;
+}
+
+#vegetarian-rolls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#vegetarian-rolls .menu-item, #vegetarian-rolls .menu-description {
+    grid-column: 1;
+}
+#vegetarian-rolls .price {
+    grid-column: 2;
+    text-align: right;
+}
+
+#special-rolls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#special-rolls .menu-item, #special-rolls .menu-description {
+    grid-column: 1;
+}
+#special-rolls .price {
+    grid-column: 2;
+    text-align: right;
+}
+
+#combo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#combo .menu-item, #combo .menu-description {
+    grid-column: 1;
+}
+#combo .price {
+    grid-column: 2;
+    text-align: right;
+}
+
+footer {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    background-color: var(--yellow);
+    filter: opacity(.95);
+    color: var(--dark-red);
+    margin: auto;
+    width: 50vw;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+nav input[type='checkbox'], nav label {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .home-container {
+        display: grid;
+        grid-template-rows: .5fr .5fr 2.5fr .5fr;
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        display: grid;
+        grid-template-rows: .5fr 4fr;
+    }
+
+    .container header {
+        width: 100vw;
+        height: auto;
+    }
+
+    .menu {
+        grid-row: 2;
+        height: fit-content;
+    }
+
+    header {
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .25fr;
+        margin: 0 auto;
+        width: 100vw;
+        height: auto;
+    }
+
+    #logo {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 40px;
+        width: 70vw;
+        height: auto;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    header li {
+        display: block;
+    }
+
+    nav a {
+        font-size: 4vw;
+        color: var(--cream);
+    }
+
+    nav {
+        grid-column: 1;
+        grid-row: 2;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        padding-bottom: 20px;
+    }
+
+    /* Because we are in mobile mode, we want to display it as a
+       vertical list */
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    /* We have two lists: the first one are the always visibile items
+       in the menu bar. The second one is the one that will be hidden */
+    nav ul:last-child {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    nav ul li {
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    input[type='checkbox']:not(:checked)+ul {
+        display: none;
+    }
+    
+    nav label {
+        text-align: center;
+        display: block;
+        line-height: 1.6em;
+        align-self: center;
+        color: var(--yellow);
+        font-size: 10vw;
+    }
+
+    nav label:hover {
+        color: black;
+    }
+
+    aside {
+        grid-row: 2;
+        width: 100vw;
+        height: auto;
+        font-size: 3.5vw;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    aside h2 {
+        font-size: 4vw;
+    }
+
+    aside h3 {
+        font-size: 3.5vw;
+    }
+
+    #curry {
+        width: 100vw;
+        height: auto;
+    }
+
+    #homepage {
+        grid-row: 3;
+        grid-column: 1;
+        width: 100vw;
+        margin: auto;
+    }
+
+    #specials h2 {
+        font-size: 4vw;
+    }
+
+    #specials p {
+        font-size: 3vw;
+    }
+
+    h3, .price {
+        font-size: 3.5vw;
+    }
+
+    .menu h2 {
+        font-size: 4vw;
+    }
+
+    #egg-roll {
+        font-size: 3vw;
+    }   
+
+    #sushi-roll {
+        padding-top: 20px;
+    }
+
+    h4 {
+        font-size: 3.5vw;
+        padding-top: 30px;
+    }
+
+    #nigiri h2 {
+        font-size: 4.5vw;
+    }
+
+    #nigiri {
+        padding: 5px;
+    }
+
+    #sashimi-rice {
+        font-size: 2vw;
+    }
+
+    #menu-price .price, #menu-items li {
+        font-size: 2.3vw;
+    }
+
+    #makimono h2 {
+        font-size: 4.5vw;
+    }
+
+    #cooked-rolls h2 {
+        font-size: 4.5vw;
+    }
+
+    #vegetarian-rolls h2 {
+        font-size: 4.5vw;
+    }
+
+    #special-rolls h2 {
+        font-size: 4.5vw;
+    }
+
+    #combo h2 {
+        font-size: 4.5vw;
+    }
+}
