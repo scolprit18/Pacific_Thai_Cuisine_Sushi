@@ -93,8 +93,8 @@ header {
     margin: 20px;
 }
 
-.container header {
-    height: 280px;
+.container header, .sushi-container header {
+    height: 300px;
 }
 
 #logo {
@@ -149,6 +149,7 @@ aside {
     padding: 40px;
     font-size: 1.3vw;
     text-align: center;
+    height: fit-content;
 }
 
 address, #phone {
@@ -178,6 +179,15 @@ aside p {
 
 .time {
     padding-bottom: 30px;
+}
+
+aside a {
+    text-decoration: none;
+    color: var(--red);
+}
+
+aside a:hover {
+    color:black;
 }
 
 .menu {
@@ -219,7 +229,7 @@ aside p {
     display: grid;
     grid-column: 2;
     grid-row: 2;
-    margin: 10px 20px 10px 40px;
+    margin: 10px 50px 10px 40px;
 }
 
 #curry {
@@ -313,7 +323,7 @@ h4 {
 #nigiri {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .5fr .5fr .5 2fr;
+    grid-template-rows: .25fr .25fr .15fr 2fr;
     padding: 0 100px 0 100px;
 }
 
@@ -440,6 +450,12 @@ footer {
     padding: 10px;
 }
 
+iframe {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+}
+
 nav input[type='checkbox'], nav label {
     display: none;
 }
@@ -458,6 +474,11 @@ nav input[type='checkbox'], nav label {
     }
 
     .container header {
+        width: 100vw;
+        height: auto;
+    }
+
+    .sushi-container header {
         width: 100vw;
         height: auto;
     }
@@ -566,6 +587,11 @@ nav input[type='checkbox'], nav label {
 
     aside h3 {
         font-size: 3.5vw;
+    }
+
+    aside img {
+        width: 40vw;
+        height: auto;
     }
 
     #curry {
